@@ -18,10 +18,43 @@
       crossorigin="anonymous"
     ></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./src/style.css" />
     <script src="./src/index.js"></script>
 
     <title>Vanilla Weather App</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h2>Vanilla Weather App</h2>
+      <h1>Castleford</h1>
+      <ul>
+        <li>Monday 12:20</li>
+        <li>Clear</li>
+      </ul>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <img
+            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+            alt="clear"
+          />
+          12°C | °F
+        </div>
+        <div class="col-sm-6">
+          <ul>
+            <li>Precipitation: 0%</li>
+            <li>Humidity: 0%</li>
+            <li>Wind: 0 k/mh</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
