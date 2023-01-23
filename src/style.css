@@ -19,6 +19,7 @@ ul {
 
 li {
   list-style: none;
+  text-transform: capitalize;
 }
 
 footer {
@@ -49,4 +50,5 @@ footer {
 .weather-temp .unit {
   position: relative;
   font-size: 20px;
+  margin-left: 10px;
 }

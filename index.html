@@ -26,6 +26,7 @@
     />
 
     <link rel="stylesheet" href="./src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./src/index.js"></script>
 
     <title>Vanilla Weather App</title>
@@ -33,10 +34,10 @@
   <body>
     <div class="container">
       <h2 class="m-2">Vanilla Weather App</h2>
-      <h1 class="m-3">In, Castleford...</h1>
+      <h1 id="city" class="m-3">In, Castleford...</h1>
       <ul>
-        <li>Last updated: Monday 12:20</li>
-        <li>The weather is: Clear</li>
+        <li id="date"></li>
+        <li id="description"></li>
       </ul>
 
       <div class="row">
@@ -45,15 +46,19 @@
             src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
             alt="clear"
           />
-          <strong>12</strong> <span class="unit">°C</span> |
+          <strong id="temperature"></strong> <a href="#" class="unit">°C </a>
+          |
           <a href="#" class="unit">°F</a>
         </div>
 
         <div class="col-sm-6 d-flex">
           <ul>
-            <li>Precipitation: 0%</li>
-            <li>Humidity: 0%</li>
-            <li>Wind: 0 k/mh</li>
+            <li>High: <span id="maxTemp"></span>°C</li>
+            <li>Low: <span id="minTemp"></span>°C</li>
+            <li>Feels Like: <span id="feelsLike"></span>°C</li>
+
+            <li>Humidity: <span id="humidity">0</span> %</li>
+            <li>Wind: <span id="wind"></span> k/mh</li>
           </ul>
         </div>
       </div>
