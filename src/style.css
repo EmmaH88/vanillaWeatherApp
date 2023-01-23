@@ -32,3 +32,21 @@ footer {
   border: 2px solid gray;
   border-radius: 5px;
 }
+
+.weather-temp img {
+  margin-right: 5px;
+  width: 80px;
+  height: 80px;
+}
+
+.weather-temp strong {
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.weather-temp .unit {
+  position: relative;
+  font-size: 20px;
+}
