@@ -59,8 +59,19 @@ function formattedDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-let apiKey = "85bcdd2ad2afb7ce15a8242b1ff12dc1";
-let city = "castleford";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function search(city) {
+  let apiKey = "85bcdd2ad2afb7ce15a8242b1ff12dc1";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+search("madrid");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);

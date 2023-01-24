@@ -34,7 +34,28 @@
   <body>
     <div class="container">
       <h2 class="m-2">Vanilla Weather App</h2>
-      <h1 id="city" class="m-3">In, Castleford...</h1>
+
+      <form id="search-form" class="mb-3">
+        <div class="row">
+          <div class="col-6 d-flex">
+            <input
+              type="search"
+              placeholder="Type a city.."
+              class="form-control"
+              id="city-input"
+            />
+          </div>
+
+          <div class="col-3 btn btn-primary">
+            <input type="submit" value="search" />
+          </div>
+        </div>
+      </form>
+
+      <h1 class="m-3">
+        In...
+        <span id="city"></span>
+      </h1>
       <ul>
         <li>last updated: <span id="date"></span></li>
         <li id="description"></li>
