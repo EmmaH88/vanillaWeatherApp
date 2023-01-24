@@ -1,5 +1,4 @@
 function displayTemperature(response) {
-  console.log(response.data);
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = Math.round(response.data.main.temp);
 
@@ -26,6 +25,14 @@ function displayTemperature(response) {
 
   let date = document.querySelector("#date");
   date.innerHTML = formattedDate(response.data.dt * 1000);
+
+  let icon = document.querySelector("#icon");
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+
+  icon.setAttribute("alt", response.data.weather[0].description);
 }
 
 function formattedDate(timestamp) {
@@ -53,6 +60,7 @@ function formattedDate(timestamp) {
 }
 
 let apiKey = "85bcdd2ad2afb7ce15a8242b1ff12dc1";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=manchester&appid=${apiKey}&units=metric`;
+let city = "castleford";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
